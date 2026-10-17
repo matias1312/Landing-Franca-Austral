@@ -1,0 +1,24 @@
+CÓMO REEMPLAZAR LAS FOTOS DE LA LANDING
+=======================================
+
+Subí tu foto a la carpeta img/ con EXACTAMENTE uno de estos nombres.
+Apenas el archivo existe, la página lo muestra en lugar de la foto de stock.
+Si lo borrás, vuelve a aparecer la de stock.
+
+ARCHIVO                          DÓNDE APARECE                    FORMATO
+portada.jpg                      Fondo de la portada (hero)       horizontal 16:9 (2000 x 1125 px)
+servicio-1-arquitectura.jpg      Servicios · Proyecto de arquit.  vertical 4:5   (800 x 1000 px)
+servicio-2-eficiencia.jpg        Servicios · Eficiencia energ.    vertical 4:5   (800 x 1000 px)
+servicio-3-calculo.jpg           Servicios · Cálculo estructural  vertical 4:5   (800 x 1000 px)
+servicio-4-obra.jpg              Servicios · Dirección de obra    vertical 4:5   (800 x 1000 px)
+proyecto-3.jpg                   Proyectos · tercera tarjeta      horizontal 4:3 (1000 x 750 px)
+
+Recomendaciones
+- Nombre en minúsculas, sin espacios y terminado en .jpg (no .jpeg, no .JPG).
+- Que pese menos de 300 KB (podés comprimirla en squoosh.app).
+- Si la proporción no coincide, la página la recorta desde el centro.
+- Al cambiar un proyecto, actualizá también su título y datos en index.html
+  (buscá "proyecto-3").
+
+Las fotos que ya son propias (casa de hormigón, casa de campo) están en .webp y en dos tamaños.
+Para cambiarlas conviene volver a generarlas en vez de reemplazarlas a mano.

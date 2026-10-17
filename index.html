@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Franca Austral · Arquitectura sustentable y construcción en seco</title>
+<meta name="description" content="Casas eficientes en construcción en seco, diseñadas para el clima, el paisaje y tu forma de vivir. Arquitectura e ingeniería en un mismo equipo. Primera charla sin costo.">
+<meta property="og:title" content="Franca Austral · Ingeniería & Arquitectura">
+<meta property="og:description" content="Casas eficientes, pensadas para habitar el paisaje. Primera charla sin costo.">
+<meta property="og:type" content="website">
+<!-- Reemplazá [CARPETA] por la ruta donde subas la landing (WhatsApp y Facebook necesitan la URL completa) -->
+<meta property="og:image" content="https://francaaustralingenieria.com/[CARPETA]/img/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5P723D3Z');</script>
+<!-- End Google Tag Manager -->
+
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preload" as="font" type="font/woff2" href="fonts/franca-sans-400.woff2" crossorigin>
+
+<style>
+@font-face{font-family:"Franca Sans";src:url("fonts/franca-sans-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Franca Sans";src:url("fonts/franca-sans-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Franca Sans";src:url("fonts/franca-sans-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+
+/* ── Paleta Franca Austral ───────────────────────────── */
+:root{
+  --ink:#231F20;        /* 35,31,32  */
+  --orange:#E57C04;     /* 229,124,4 */
+  --amber:#FAA300;      /* 250,163,0 */
+  --grey:#C8C8C8;       /* 200,200,200 */
+  --light:#EBEBEB;      /* 235,235,235 */
+  --white:#FFFFFF;
+  --muted:#5C5859;      /* texto secundario, derivado de --ink */
+  --danger:#B3261E;--success:#2F6B4F;
+  --font:"Franca Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:clamp(16px,3vw,40px);
+  --r-xl:28px;--r-lg:20px;--r-md:12px;
+  --ease:cubic-bezier(.2,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);font-size:16px;line-height:1.6;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;color:var(--ink);font-weight:600;letter-spacing:-.015em}
+p{margin:0}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:none;box-shadow:0 0 0 2px var(--white),0 0 0 4px var(--orange);border-radius:var(--r-md)}
+::selection{background:var(--amber);color:var(--ink)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.wrap{max-width:1320px;margin:0 auto;padding-inline:var(--gutter)}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.eyebrow::before{content:"";width:24px;height:3px;border-radius:2px;background:var(--orange);flex:none}
+.about .eyebrow,.b2b .txt .eyebrow{color:var(--ink);max-width:none}
+.h2{font-size:clamp(30px,3.2vw,46px);line-height:1.12}
+.lead-sm{color:var(--muted);max-width:520px}
+.section{padding-block:clamp(56px,7vw,112px);scroll-margin-top:72px}
+.section-head{display:flex;flex-direction:column;gap:14px;max-width:720px;margin-bottom:clamp(28px,4vw,48px)}
+.panel{background:var(--light);border-radius:var(--r-xl)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--min,300px)),1fr));gap:var(--gap,24px)}
+.ph{background-color:var(--grey)} /* color de respaldo mientras carga la imagen */
+
+/* ── Botones ─────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;border:1px solid transparent;font:inherit;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;transition:background 160ms var(--ease),color 160ms var(--ease),border-color 160ms var(--ease)}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-acc{background:var(--orange);color:var(--ink)}
+.btn-acc:hover{background:var(--amber)}
+.btn-ink{background:var(--ink);color:var(--white)}
+.btn-ink:hover{background:#3b3536}
+.btn-white{background:var(--white);color:var(--ink)}
+.btn-white:hover{background:var(--light)}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--white)}
+.btn-line-white{background:transparent;color:var(--white);border-color:rgba(255,255,255,.7)}
+.btn-line-white:hover{background:var(--white);color:var(--ink)}
+.btn-block{width:100%}
+.link-btn{background:none;border:0;padding:8px 0;font:inherit;font-size:14px;color:var(--muted);text-decoration:underline;cursor:pointer}
+
+/* ── Header ──────────────────────────────────────────── */
+.header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--light)}
+.header .wrap{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.header img{height:38px;width:auto}
+.nav{display:flex;align-items:center;gap:32px;font-size:15px}
+.nav a:not(.btn){text-decoration:none;color:var(--ink);padding-block:6px;border-bottom:2px solid transparent}
+.nav a:not(.btn):hover{border-bottom-color:var(--orange)}
+.nav .btn{min-height:44px;padding:0 20px;font-size:14px}
+
+/* ── Hero ────────────────────────────────────────────── */
+.hero{padding-top:12px}
+.hero-box{position:relative;overflow:hidden;border-radius:var(--r-xl);min-height:640px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(28px,4vw,72px);align-items:center;padding:clamp(24px,4.5vw,64px)}
+.hero-box > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-box::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(35,31,32,.78) 0%,rgba(35,31,32,.55) 45%,rgba(35,31,32,.12) 100%)}
+.hero-box > *:not(img){position:relative;z-index:2}
+.hero-copy{display:flex;flex-direction:column;gap:24px;color:var(--white)}
+.hero .eyebrow{color:var(--white)}
+.hero .eyebrow::before{background:var(--amber)}
+.hero h1{color:var(--white);font-size:clamp(38px,4.8vw,68px);line-height:1.05}
+.hero .lead{max-width:540px;font-size:18px;color:rgba(255,255,255,.88)}
+.checks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;color:rgba(255,255,255,.92)}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks svg{width:20px;height:20px;flex:none;margin-top:3px;color:var(--amber)}
+@media (max-width:760px){
+  .hero-box{min-height:0;padding:20px}
+  .hero-box::before{background:linear-gradient(180deg,rgba(35,31,32,.72) 0%,rgba(35,31,32,.6) 55%,rgba(35,31,32,.35) 100%)}
+  .hero-copy{padding:12px 4px 4px}
+}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ── Formulario ──────────────────────────────────────── */
+.form-card{background:var(--white);border-radius:var(--r-lg);padding:clamp(22px,3vw,36px);box-shadow:0 20px 50px rgba(35,31,32,.18);scroll-margin-top:96px}
+.form-card form,.form-card .done{display:flex;flex-direction:column;gap:18px}
+.form-card [hidden]{display:none!important}
+.form-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.form-top h2{font-size:24px;line-height:1.2}
+.step{font-size:12px;font-weight:600;color:var(--muted);background:var(--light);border-radius:999px;padding:4px 10px;white-space:nowrap}
+.hint{font-size:14px;color:var(--muted)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field > span,.legend{font-size:13px;font-weight:600;color:var(--ink)}
+.in{width:100%;height:50px;padding:0 16px;border:1px solid var(--grey);border-radius:var(--r-md);background:var(--white);font:inherit;font-size:16px;color:var(--ink);appearance:none;-webkit-appearance:none;transition:border-color 140ms var(--ease)}
+.in::placeholder{color:#8a8687}
+select.in{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23231F20' stroke-width='1.6'%3E%3Cpath d='m1 1 5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+.in:hover{border-color:#a3a3a3}
+.in:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(229,124,4,.18)}
+.in[aria-invalid="true"]{border-color:var(--danger)}
+fieldset{margin:0;padding:0;border:0}
+.legend{padding:0;margin-bottom:8px}
+.chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span{display:flex;align-items:center;min-height:50px;padding:10px 14px;border:1px solid var(--grey);border-radius:var(--r-md);font-size:14px;line-height:1.25;transition:background 140ms var(--ease),border-color 140ms var(--ease)}
+.chip:hover span{border-color:var(--ink)}
+.chip input:checked + span{background:var(--ink);color:var(--white);border-color:var(--ink);font-weight:600}
+.chip input:focus-visible + span{box-shadow:0 0 0 3px rgba(229,124,4,.35)}
+.row2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:14px}
+.error{font-size:14px;color:var(--danger)}
+.small{font-size:12px;color:var(--muted)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.between{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.done h2{font-size:26px;line-height:1.2}
+.done p{color:var(--muted)}
+.ok-badge{align-self:flex-start;font-size:12px;font-weight:600;color:var(--success);background:#e7f1ec;border-radius:999px;padding:4px 12px}
+
+/* ── Sobre nosotros + cifras ─────────────────────────── */
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px 64px;align-items:center}
+.about p{color:var(--muted);max-width:560px}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}
+.stat strong{display:block;font-size:clamp(40px,4.4vw,60px);line-height:1;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+.stat strong em{font-style:normal;color:var(--orange)}
+.stat span{display:block;margin-top:8px;font-size:14px;color:var(--muted)}
+.clients{margin-top:clamp(40px,5vw,72px);padding-top:28px;border-top:1px solid var(--light);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 40px}
+.clients .label{font-size:13px;color:var(--muted)}
+.clients .logos{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:24px 56px}
+.clients .logos img{height:56px;width:auto;max-width:190px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1);opacity:.7;transition:filter 220ms var(--ease),opacity 220ms var(--ease)}
+.clients .logos img.sm{height:40px}
+.clients .logos li:hover img{filter:none;opacity:1}
+@media (max-width:760px){.clients .logos{gap:20px 32px}.clients .logos img{height:44px;max-width:150px}.clients .logos img.sm{height:32px}}
+
+/* ── Servicios (tarjetas con imagen) ─────────────────── */
+.services-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 40px;margin-bottom:clamp(28px,4vw,48px)}
+.services-head .section-head{margin:0}
+.cards{display:grid;gap:20px;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1100px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;gap:12px}
+.card .img{position:relative;aspect-ratio:4/5;border-radius:var(--r-lg);overflow:hidden}
+.card .img img{width:100%;height:100%;object-fit:cover;transition:transform 640ms cubic-bezier(.16,1,.3,1)}
+.card:hover .img img{transform:scale(1.04)}
+.card .tag{position:absolute;top:12px;left:12px;background:var(--white);color:var(--ink);font-size:12px;font-weight:600;border-radius:999px;padding:4px 10px}
+.card h3{font-size:20px;line-height:1.25}
+.card p{font-size:15px;color:var(--muted)}
+.card .get{font-size:14px;color:var(--ink)}
+
+/* ── Por qué ─────────────────────────────────────────── */
+.why{padding:clamp(28px,4vw,56px)}
+.why .cols{--gap:20px;--min:240px}
+.why-item{background:var(--white);border-radius:var(--r-lg);padding:28px;display:flex;flex-direction:column;gap:12px}
+.why-item .num{width:44px;height:44px;border-radius:50%;background:var(--amber);color:var(--ink);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px}
+.why-item h3{font-size:21px;line-height:1.25}
+.why-item p{color:var(--muted)}
+
+/* ── Proceso ─────────────────────────────────────────── */
+.process{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px clamp(40px,6vw,96px);align-items:center}
+.process-img{position:relative;padding-top:56px}
+.process-img .img{aspect-ratio:4/5;border-radius:var(--r-xl);overflow:hidden}
+.process-img .img img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.badge-circle{position:absolute;top:0;right:clamp(8px,4vw,32px);width:132px;height:132px;border-radius:50%;background:var(--orange);color:var(--ink);display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;font-size:15px;line-height:1.2;padding:16px;box-shadow:0 0 0 8px var(--white)}
+.steps{list-style:none;margin:0;padding:0}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:4px 20px;padding:26px 0;border-bottom:1px solid var(--grey)}
+.steps li:first-child{padding-top:8px}
+.steps .ic{grid-row:span 2;width:52px;height:52px;border-radius:50%;background:var(--ink);color:var(--white);display:flex;align-items:center;justify-content:center}
+.steps .ic svg{width:22px;height:22px}
+.steps h3{font-size:20px;line-height:1.3}
+.steps p{color:var(--muted)}
+.steps .n{font-size:12px;font-weight:600;color:var(--muted);margin-right:8px}
+
+/* ── Proyectos ───────────────────────────────────────── */
+.projects{--min:320px;--gap:24px}
+.project{background:var(--white);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column}
+.project .img{position:relative;aspect-ratio:4/3;overflow:hidden}
+.project .img img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;transition:transform 640ms cubic-bezier(.16,1,.3,1)}
+.project:hover .img img{transform:scale(1.04)}
+.project .tag{position:absolute;top:12px;left:12px;background:var(--white);font-size:12px;font-weight:600;border-radius:999px;padding:4px 10px}
+.project .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:12px}
+.project h3{font-size:20px}
+.project dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14px}
+.project dt{color:var(--muted)}
+.project dd{margin:0}
+
+/* ── Testimonios ─────────────────────────────────────── */
+.quotes{--min:300px;--gap:20px}
+.quote{margin:0;background:var(--white);border:1px solid var(--light);border-radius:var(--r-lg);padding:28px;display:flex;flex-direction:column;gap:20px}
+.quote .mark{width:34px;height:34px;color:var(--amber)}
+.quote blockquote{margin:0;font-size:17px;line-height:1.6}
+.quote figcaption{margin-top:auto;display:flex;align-items:center;gap:12px}
+.quote .avatar{width:44px;height:44px;border-radius:50%;background:var(--light);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:none}
+.quote figcaption strong{display:block;font-weight:600}
+.quote figcaption span{display:block;font-size:13px;color:var(--muted)}
+
+/* ── FAQ ─────────────────────────────────────────────── */
+.faq-grid{--min:340px;--gap:32px 64px;align-items:start}
+.faq{display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--light);border-radius:var(--r-lg);transition:background 160ms var(--ease)}
+.faq details[open]{background:var(--white);box-shadow:inset 0 0 0 1px var(--grey)}
+.faq summary{list-style:none;min-height:64px;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;font-size:17px;font-weight:600;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:32px;height:32px;border-radius:50%;background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23231F20' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M7 2v10M2 7h10'/%3E%3C/svg%3E") center no-repeat;transition:transform 200ms var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg);background-color:var(--light)}
+.faq details p{padding:0 22px 22px;color:var(--muted)}
+
+/* ── CTA final ───────────────────────────────────────── */
+.cta{background:var(--orange);border-radius:var(--r-xl);padding:clamp(32px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:28px 48px;align-items:center}
+.cta h2{font-size:clamp(30px,3.4vw,50px);line-height:1.08}
+.cta p{margin-top:12px;font-size:17px;max-width:520px}
+.cta .btns{justify-content:flex-start}
+@media (min-width:900px){.cta .btns{justify-content:flex-end}}
+
+/* ── Footer ──────────────────────────────────────────── */
+.footer{margin-top:clamp(56px,7vw,96px);background:var(--light);font-size:15px}
+.footer .top{padding-block:48px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:32px}
+.footer img{height:42px;width:auto}
+.footer .info{display:flex;flex-wrap:wrap;gap:24px 56px}
+.footer .info div{display:flex;flex-direction:column;gap:6px}
+.footer .info .label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.footer a{text-decoration:none}
+.footer a:hover{color:var(--orange)}
+.footer .bottom{display:flex;padding-block:0 28px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+/* ── Móvil ───────────────────────────────────────────── */
+.mbar{display:none}
+@media (max-width:760px){
+  .nav{display:none}
+  .header .wrap{height:62px}
+  .header img{height:30px}
+  .chips{grid-template-columns:1fr}
+  .stats{gap:28px 16px}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--white);border-top:1px solid var(--light);box-shadow:0 -6px 20px rgba(35,31,32,.08)}
+  .mbar .btn-acc{flex:1;padding:0 12px}
+  .mbar .btn-line{padding:0 16px}
+  body{padding-bottom:74px}
+}
+</style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Franca Austral Ingeniería & Arquitectura","url":"https://francaaustralingenieria.com/","description":"Arquitectura sustentable, eficiencia energética y construcción en seco en wood frame y steel frame.","areaServed":["AR","UY","ES"],"address":[{"@type":"PostalAddress","addressLocality":"Puerto Madryn","addressRegion":"Chubut","addressCountry":"AR"},{"@type":"PostalAddress","addressLocality":"Buenos Aires","addressCountry":"AR"}]}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P723D3Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Íconos (trazo fino, estilo Lucide) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+  <symbol id="i-hat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><path d="M14 6a6 6 0 0 1 6 6v3"/></symbol>
+</svg>
+
+<header class="header">
+  <div class="wrap">
+    <a href="#inicio" aria-label="Franca Austral, inicio"><img src="img/logo-franca-austral.png" alt="Franca Austral Ingeniería &amp; Arquitectura" width="153" height="40"></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#contacto" class="btn btn-acc" data-cta="header">Agendar una charla</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ═══ HERO + FORMULARIO ═══ -->
+<section id="inicio" class="hero">
+  <div class="wrap">
+    <div class="hero-box ph">
+      <img src="img/portada.webp" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1595521624992-48a59aef95e3?auto=format&fit=crop&w=2000&q=70'" alt="" fetchpriority="high">
+      <div class="hero-copy">
+        <p class="eyebrow">Arquitectura &amp; Ingeniería · Construcción en seco</p>
+        <h1>Casas eficientes, pensadas para habitar el paisaje.</h1>
+        <p class="lead">Diseñamos viviendas en construcción en seco que aprovechan el sol, la luz y las vistas de cada terreno. Menos consumo de energía, materiales nobles y espacios que se disfrutan todos los días.</p>
+        <ul class="checks">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Diseño bioclimático según el clima de cada zona</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Envolvente aislada para un confort térmico real</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Primera charla sin costo</li>
+        </ul>
+        <div class="btns"><a href="#" class="btn btn-line-white js-wa" data-cta="hero-whatsapp"><svg aria-hidden="true"><use href="#i-chat"/></svg>Preferís WhatsApp</a></div>
+      </div>
+
+      <div id="contacto" class="form-card">
+        <!-- Paso 1 -->
+        <form id="paso1" novalidate>
+          <div class="form-top"><h2>Contanos tu proyecto</h2><span class="step">Paso 1 de 2</span></div>
+          <p class="hint">Tres datos y te contactamos para conversar sobre tu proyecto.</p>
+          <div class="row2">
+            <label class="field"><span>Nombre</span><input class="in" type="text" name="nombre" autocomplete="name" placeholder="Nombre y apellido" required></label>
+            <label class="field"><span>WhatsApp</span><input class="in" type="tel" name="telefono" autocomplete="tel" inputmode="tel" placeholder="Ej.: 11 2345 6789" required></label>
+          </div>
+          <fieldset>
+            <legend class="legend">¿Qué querés hacer?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="tipo" value="Vivienda nueva" required><span>Vivienda nueva</span></label>
+              <label class="chip"><input type="radio" name="tipo" value="Ampliación o reforma"><span>Ampliación o reforma</span></label>
+              <label class="chip"><input type="radio" name="tipo" value="Obra comercial"><span>Obra comercial</span></label>
+              <label class="chip"><input type="radio" name="tipo" value="Otro"><span>Otro</span></label>
+            </div>
+          </fieldset>
+          <div class="hp" aria-hidden="true"><label>No completar <input type="text" name="empresa_web" tabindex="-1" autocomplete="off"></label></div>
+          <p class="error" role="alert" hidden>Completá nombre, WhatsApp y el tipo de proyecto para continuar.</p>
+          <button type="submit" class="btn btn-acc btn-block">Continuar<svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <p class="small">Tus datos se usan sólo para responder esta consulta.</p>
+        </form>
+
+        <!-- Paso 2 -->
+        <form id="paso2" novalidate hidden>
+          <div class="form-top"><h2>Un poco más de contexto</h2><span class="step">Paso 2 de 2</span></div>
+          <p class="hint">Opcional. Nos ayuda a llegar a la primera charla conociendo un poco tu proyecto.</p>
+          <label class="field"><span>Ciudad de la obra</span><input class="in" type="text" name="ubicacion" autocomplete="address-level2" placeholder="Ej.: Trelew, Chubut"></label>
+          <label class="field"><span>¿En qué etapa estás?</span>
+            <select class="in" name="etapa"><option value="">Elegí una opción</option><option>Tengo terreno, sin proyecto</option><option>Tengo un anteproyecto</option><option>Tengo planos, necesito cálculo</option><option>Ya estoy en obra</option></select></label>
+          <div class="row2">
+            <label class="field"><span>Inversión estimada</span>
+              <select class="in" name="inversion"><option value="">A definir</option><option>Menos de USD 50.000</option><option>USD 50.000 – 100.000</option><option>Más de USD 100.000</option></select></label>
+            <label class="field"><span>Inicio de obra</span>
+              <select class="in" name="inicio"><option value="">A definir</option><option>En los próximos 3 meses</option><option>De 3 a 6 meses</option><option>Más adelante</option><option>Ya empezó</option></select></label>
+          </div>
+          <button type="submit" class="btn btn-acc btn-block">Enviar y agendar la charla</button>
+          <div class="between">
+            <button type="button" class="link-btn" id="volver">Volver</button>
+            <button type="submit" class="link-btn">Omitir y enviar</button>
+          </div>
+        </form>
+
+        <!-- Confirmación -->
+        <div class="done" id="listo" role="status" hidden>
+          <span class="ok-badge">Consulta recibida</span>
+          <h2>Gracias, <span id="nombre-ok"></span>. Ya tenemos tu consulta.</h2>
+          <p>Te escribimos por WhatsApp dentro de las próximas 24 h hábiles para coordinar la primera charla. Si querés, adelantanos fotos del terreno, referencias que te gusten o un croquis.</p>
+          <a href="#" class="btn btn-ink btn-block js-wa-lead" data-cta="gracias-whatsapp"><svg aria-hidden="true"><use href="#i-chat"/></svg>Abrir WhatsApp ahora</a>
+          <button type="button" class="link-btn" id="otra" style="align-self:flex-start">Enviar otra consulta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOBRE NOSOTROS ═══ -->
+<section class="section">
+  <div class="wrap">
+    <div class="about">
+      <div class="section-head" style="margin:0">
+        <p class="eyebrow">Sobre nosotros</p>
+        <h2 class="h2">Arquitectura que nace del lugar y de quienes lo habitan.</h2>
+        <p>Somos un estudio de arquitectura e ingeniería especializado en construcción en seco. Cada proyecto parte del terreno, del clima y de la forma de vivir de cada familia, y se resuelve con el rigor de un equipo que calcula sus propias estructuras.</p>
+      </div>
+      <!-- Completá las cifras entre corchetes con datos reales -->
+      <div class="stats">
+        <div class="stat"><strong>[+150]</strong><span>proyectos calculados</span></div>
+        <div class="stat"><strong>[+10]</strong><span>años de experiencia</span></div>
+        <div class="stat"><strong>3<em>.</em></strong><span>países con obras: AR, UY y ES</span></div>
+        <div class="stat"><strong>2<em>.</em></strong><span>estudios: Puerto Madryn y Buenos Aires</span></div>
+      </div>
+    </div>
+    <div class="clients">
+      <span class="label">Estudios y constructoras que confían en nuestra ingeniería</span>
+      <ul class="logos">
+        <li><img src="img/clientes/construcsec.png" alt="Construc-sec, steel frame y drywall" loading="lazy"></li>
+        <li><img src="img/clientes/garabi.png" alt="Grupo Garabí" loading="lazy"></li>
+        <li><img src="img/clientes/loberia.png" alt="Lobería Steel" loading="lazy"></li>
+        <li><img src="img/clientes/ggal.png" alt="G-Gal Estudio de Arquitectura" loading="lazy" class="sm"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICIOS ═══ -->
+<section id="servicios" class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="services-head">
+      <div class="section-head">
+        <p class="eyebrow">Servicios</p>
+        <h2 class="h2">Del primer boceto a la casa terminada.</h2>
+        <p class="lead-sm">Un mismo equipo diseña, calcula y acompaña la obra, para que lo que imaginaste llegue intacto a la realidad.</p>
+      </div>
+      <a href="#contacto" class="btn btn-ink" data-cta="servicios">Consultar por mi proyecto</a>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="img ph"><img src="img/servicio-1-arquitectura.webp" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=70'" alt="Arquitecta dibujando un plano con lápiz y regla" loading="lazy"><span class="tag">01</span></div>
+        <h3>Proyecto de arquitectura</h3>
+        <p>Viviendas y ampliaciones diseñadas a partir del clima, el terreno y tu forma de habitar.</p>
+        <p class="get"><strong>Recibís:</strong> anteproyecto, renders y proyecto completo.</p>
+      </article>
+      <article class="card">
+        <div class="img ph"><img src="img/servicio-2-eficiencia.webp" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1704742950992-9815a104820c?auto=format&fit=crop&w=800&q=70'" alt="Interior de una vivienda en construcción con entramado de madera" loading="lazy"><span class="tag">02</span></div>
+        <h3>Eficiencia energética</h3>
+        <p>Orientación, envolvente y aislación definidas desde el diseño para consumir menos energía.</p>
+        <p class="get"><strong>Recibís:</strong> estrategia bioclimática y detalles de envolvente.</p>
+      </article>
+      <article class="card">
+        <div class="img ph"><img src="img/servicio-3-calculo.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1509024368907-57294758cfc5?auto=format&fit=crop&w=800&q=70'" alt="Estructura vista desde abajo contra el cielo" loading="lazy"><span class="tag">03</span></div>
+        <h3>Cálculo estructural</h3>
+        <p>Estructuras en wood frame y steel frame, calculadas por nuestro propio equipo de ingeniería.</p>
+        <p class="get"><strong>Recibís:</strong> memoria de cálculo y planos estructurales.</p>
+      </article>
+      <article class="card">
+        <div class="img ph"><img src="img/servicio-4-obra.webp" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1587582423116-ec07293f0395?auto=format&fit=crop&w=800&q=70'" alt="Obrero con casco sobre la estructura de una vivienda" loading="lazy"><span class="tag">04</span></div>
+        <h3>Dirección de obra</h3>
+        <p>Acompañamiento en obra para que la casa se construya tal como fue pensada.</p>
+        <p class="get"><strong>Recibís:</strong> visitas, seguimiento y respuesta a consultas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ POR QUÉ ═══ -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="panel why">
+      <div class="section-head">
+        <p class="eyebrow">Nuestra forma de proyectar</p>
+        <h2 class="h2">Diseñamos para cómo se vive, no sólo para cómo se ve.</h2>
+      </div>
+      <div class="cols">
+        <div class="why-item"><span class="num">01</span><h3>Eficiencia energética</h3><p>Orientación, aislación y aberturas pensadas para aprovechar el sol en invierno y protegerse en verano. Una casa que necesita menos energía para estar confortable.</p></div>
+        <div class="why-item"><span class="num">02</span><h3>Conexión con la naturaleza</h3><p>Cada proyecto se implanta respetando el terreno, las vistas y la vegetación. El paisaje entra a la casa a través de la luz y las visuales.</p></div>
+        <div class="why-item"><span class="num">03</span><h3>Materiales conscientes</h3><p>Construcción en seco con madera y acero: menos residuos y menos agua en obra, plazos más cortos y materiales nobles que envejecen bien.</p></div>
+        <div class="why-item"><span class="num">04</span><h3>Espacios para habitar</h3><p>Partimos de tu rutina: dónde da el sol a la mañana, cómo te gusta cocinar, recibir o descansar. Espacios que acompañan la vida de cada día.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CÓMO TRABAJAMOS ═══ -->
+<section id="proceso" class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Cómo trabajamos</p>
+      <h2 class="h2">Un proceso cercano, con tiempo para escucharte.</h2>
+    </div>
+    <div class="process">
+      <div class="process-img">
+        <div class="img ph"><img src="img/Refugio nordico.webp" srcset="img/Refugio nordico.webp 500w, img/Refugio nordico.webp 900w" sizes="(max-width: 900px) 100vw, 45vw" width="900" height="1125" alt="Render de una vivienda del estudio: volumen a dos aguas revestido en madera, con un gran ventanal abierto al campo" loading="lazy"></div>
+        <div class="badge-circle">Primera charla sin costo</div>
+      </div>
+      <ol class="steps">
+        <li><span class="ic"><svg aria-hidden="true"><use href="#i-chat"/></svg></span><h3><span class="n">01</span>Conversación inicial</h3><p>Nos contás cómo vivís, qué te gusta del terreno y qué esperás de tu casa.</p></li>
+        <li><span class="ic"><svg aria-hidden="true"><use href="#i-file"/></svg></span><h3><span class="n">02</span>Propuesta a medida</h3><p>Recibís alcance, plazos y honorarios por etapa, claros desde el inicio.</p></li>
+        <li><span class="ic"><svg aria-hidden="true"><use href="#i-layers"/></svg></span><h3><span class="n">03</span>Diseño y cálculo</h3><p>Desarrollamos la casa con la orientación, la luz, la envolvente y la estructura resueltas juntas.</p></li>
+        <li><span class="ic"><svg aria-hidden="true"><use href="#i-hat"/></svg></span><h3><span class="n">04</span>Obra</h3><p>Preparamos la documentación completa y te acompañamos durante la construcción.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROYECTOS ═══
+     IMPORTANTE: las fotos son de referencia (Unsplash). Reemplazalas por renders o fotos
+     de obras propias antes de publicar, y completá los datos entre corchetes. -->
+<section id="proyectos" class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="panel" style="padding:clamp(28px,4vw,56px)">
+      <div class="section-head">
+        <p class="eyebrow">Proyectos</p>
+        <h2 class="h2">Casas que dialogan con su entorno.</h2>
+      </div>
+      <div class="projects cols">
+        <article class="project">
+          <div class="img ph"><img src="img/proyecto-1.webp" srcset="img/proyecto-1.webp 600w, img/proyecto-1.webp 1000w" sizes="(max-width: 760px) 100vw, 33vw" width="1000" height="706" alt="Vivienda a dos aguas revestida en madera, implantada en un paisaje de pastizal y pinos" loading="lazy"><span class="tag">Wood frame</span></div>
+          <div class="body"><h3>Desarrollo turístico</h3>
+            <dl><dt>Ubicación</dt><dd>Villa Lago Rivadavia</dd><dt>Alcance</dt><dd>Factibilidad + diseño + ingeniería</dd></dl></div>
+        </article>
+        <article class="project">
+          <div class="img ph"><img src="img/casa-hormigon-1000.webp" srcset="img/casa-hormigon-600.webp 600w, img/casa-hormigon-1000.webp 1000w" sizes="(max-width: 760px) 100vw, 33vw" width="1000" height="1250" alt="Vivienda entre medianeras con fachada de hormigón visto y parasoles verticales de madera" loading="lazy"><span class="tag">Hormigón y madera</span></div>
+          <div class="body"><h3>Vivienda urbana </h3>
+            <dl><dt>Superficie</dt><dd>320 m²</dd><dt>Alcance</dt><dd>Proyecto</dd></dl></div>
+        </article>
+        <article class="project">
+          <div class="img ph"><img src="img/proyecto-3.webp" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=70'" alt="[Describí la obra]" loading="lazy"><span class="tag">Wood frame</span></div>
+          <div class="body"><h3>Vivienda modular</h3>
+            <dl><dt>Superficie</dt><dd>55 m²</dd><dt>Alcance</dt><dd>Proyecto + cálculo</dd></dl></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIOS ═══ -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Testimonios</p>
+      <h2 class="h2">Lo que dicen quienes trabajaron con nosotros.</h2>
+    </div>
+    <div class="quotes cols">
+      <figure class="quote"><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 4-2 5-4 5v3zm11 0c3 0 7-1 7-8V5h-7v8h4c0 4-2 5-4 5v3z"/></svg><blockquote>Muy buena documentación, cálculos y asesoramiento en la dirección de obra. Siempre acompañando en cada detalle y en las distintas etapas del proyecto y obra.</blockquote><figcaption><span class="avatar" aria-hidden="true">PB</span><div><strong>Pablo Briguglio</strong><span>[Rol · Proyecto]</span></div></figcaption></figure>
+      <figure class="quote"><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 4-2 5-4 5v3zm11 0c3 0 7-1 7-8V5h-7v8h4c0 4-2 5-4 5v3z"/></svg><blockquote>Un servicio impecable desde lo técnico y humano. Pudimos realizar varios proyectos en Bragado bajo la modalidad steel frame. Los recomiendo para proyectos de ingeniería en todo el país.</blockquote><figcaption><span class="avatar" aria-hidden="true">NB</span><div><strong>Norberto Bitancourt</strong><span>Supervisor técnico · Navarro Constructora</span></div></figcaption></figure>
+      <figure class="quote"><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 4-2 5-4 5v3zm11 0c3 0 7-1 7-8V5h-7v8h4c0 4-2 5-4 5v3z"/></svg><blockquote>Muy recomendables para el cálculo de ingeniería en todos los sistemas constructivos. Están en todos los detalles y siempre bien predispuestos para acompañar nuestro trabajo.</blockquote><figcaption><span class="avatar" aria-hidden="true">MU</span><div><strong>Mariano Uriarte</strong><span>[Rol · Empresa]</span></div></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PREGUNTAS ═══ -->
+<section id="preguntas" class="section" style="padding-top:0">
+  <div class="wrap cols faq-grid">
+    <div class="section-head" style="margin:0">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 class="h2">Antes de escribirnos.</h2>
+      <p class="lead-sm">Si tu duda no está acá, la conversamos en la primera charla.</p>
+    </div>
+    <div class="faq">
+      <details><summary>¿La primera charla tiene costo?</summary><p>No. Es un encuentro para conocerte, entender tu terreno y lo que buscás. Después recibís una propuesta con alcance y honorarios por etapa.</p></details>
+      <details><summary>¿Una casa en construcción en seco es realmente eficiente?</summary><p>Sí. Los sistemas en seco permiten incorporar aislación continua en muros y techos, lo que mejora el confort térmico y acústico y reduce la energía necesaria para calefaccionar y refrigerar. El resultado depende del diseño y de la ejecución, por eso los resolvemos juntos.</p></details>
+      <details><summary>¿Cuánto dura una casa en wood frame o steel frame?</summary><p>Bien diseñada, protegida de la humedad y con un mantenimiento razonable, tiene una vida útil comparable a la de una construcción tradicional.</p></details>
+      <details><summary>¿Cuánto cuesta un proyecto?</summary><p>Depende de la superficie, el terreno y las etapas que contrates. Por eso la propuesta se arma después de la primera charla, separada por etapa.</p></details>
+      <details><summary>¿Trabajan fuera de Puerto Madryn y Buenos Aires?</summary><p>Sí. El diseño, el cálculo y la documentación se resuelven a distancia. Hay obras en distintas provincias, en Uruguay y en España.</p></details>
+      <details><summary>¿Qué necesito para empezar?</summary><p>Alcanza con la ubicación del terreno y una idea de cómo te gustaría vivir. Si tenés fotos, referencias o un croquis, sumalos.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA FINAL ═══ -->
+<section class="section" style="padding-top:0;padding-bottom:0">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>Contanos cómo te imaginás vivir.</h2>
+        <p>En la primera charla, sin costo, conversamos sobre tu terreno, tus ideas y cómo convertirlas en una casa eficiente y cálida.</p>
+      </div>
+      <div class="btns">
+        <a href="#contacto" class="btn btn-ink" data-cta="final">Completar el formulario</a>
+        <a href="#" class="btn btn-white js-wa" data-cta="final-whatsapp"><svg aria-hidden="true"><use href="#i-chat"/></svg>Escribir por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap top">
+    <img src="img/logo-franca-austral.png" alt="Franca Austral Ingeniería &amp; Arquitectura" width="153" height="40" loading="lazy">
+    <div class="info">
+      <div><span class="label">Estudios</span><span>Puerto Madryn, Chubut</span><span>Buenos Aires</span></div>
+      <div><span class="label">Contacto</span><a href="mailto:contacto@francaaustralingenieria.com" id="mail">contacto@francaaustralingenieria.com</a><a href="#" class="js-wa" data-cta="footer-whatsapp">WhatsApp +54 9 11 2408-2191</a></div>
+    </div>
+  </div>
+  <div class="wrap"><div class="bottom" style="border-top:1px solid var(--grey);padding-top:20px"><span>Franca Austral · Ingeniería sin límites</span><span>© <span id="anio">2026</span></span></div></div>
+</footer>
+
+<div class="mbar">
+  <a href="#contacto" class="btn btn-acc" data-cta="mobile-bar">Agendar una charla</a>
+  <a href="#" class="btn btn-line js-wa" aria-label="Escribir por WhatsApp" data-cta="mobile-whatsapp"><svg aria-hidden="true"><use href="#i-chat"/></svg></a>
+</div>
+
+<script>
+/* ============================================================
+   CONFIGURACIÓN — completá estos datos antes de publicar
+   ============================================================ */
+var CONFIG = {
+  // Número de WhatsApp en formato internacional, sin + ni espacios (ej.: 5492804123456)
+  whatsapp: "5491124082191",
+  // Endpoint que recibe el formulario por POST (ej.: https://formspree.io/f/xxxxxxx).
+  // Si queda vacío, al enviar se abre WhatsApp con la consulta ya escrita.
+  endpoint: "",
+  // Email que se muestra en el pie
+  email: "contacto@francaaustralingenieria.com"
+};
+/* ============================================================ */
+
+(function () {
+  var dl = window.dataLayer = window.dataLayer || [];
+  var lead = {};
+  var p1 = document.getElementById("paso1");
+  var p2 = document.getElementById("paso2");
+  var ok = document.getElementById("listo");
+  var err = p1.querySelector(".error");
+  document.getElementById("anio").textContent = new Date().getFullYear();
+
+  function waLink(text) {
+    return "https://wa.me/" + CONFIG.whatsapp + (text ? "?text=" + encodeURIComponent(text) : "");
+  }
+  function leadText() {
+    var lines = ["Hola, soy " + (lead.nombre || "") + ". Completé el formulario de la web."];
+    if (lead.tipo) lines.push("Proyecto: " + lead.tipo);
+    if (lead.ubicacion) lines.push("Ubicación: " + lead.ubicacion);
+    if (lead.etapa) lines.push("Etapa: " + lead.etapa);
+    if (lead.inversion) lines.push("Inversión: " + lead.inversion);
+    if (lead.inicio) lines.push("Inicio: " + lead.inicio);
+    return lines.join("\n");
+  }
+  function send(paso) {
+    if (!CONFIG.endpoint || lead.empresa_web) return Promise.resolve(false);
+    var fd = new FormData();
+    Object.keys(lead).forEach(function (k) { fd.append(k, lead[k]); });
+    fd.append("paso", paso);
+    fd.append("origen", location.href);
+    return fetch(CONFIG.endpoint, { method: "POST", body: fd, headers: { Accept: "application/json" } })
+      .then(function (r) { return r.ok; }).catch(function () { return false; });
+  }
+  function collect(form) {
+    new FormData(form).forEach(function (v, k) { lead[k] = String(v).trim(); });
+  }
+  function show(el) {
+    [p1, p2, ok].forEach(function (x) { x.hidden = x !== el; });
+    var first = el.querySelector("input:not([type=radio]), select");
+    if (first) first.focus({ preventScroll: true });
+  }
+
+  document.querySelectorAll(".js-wa").forEach(function (a) {
+    a.href = waLink(a.getAttribute("data-wa-text") || "Hola, quiero consultar por un proyecto.");
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  var mail = document.getElementById("mail");
+  mail.href = "mailto:" + CONFIG.email; mail.textContent = CONFIG.email;
+
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("[data-cta]");
+    if (a) dl.push({ event: "cta_click", cta: a.getAttribute("data-cta") });
+  });
+
+  p1.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var n = p1.nombre, t = p1.telefono, tipo = p1.querySelector('input[name="tipo"]:checked');
+    var bad = false;
+    [n, t].forEach(function (i) { var v = !i.value.trim(); i.setAttribute("aria-invalid", v); bad = bad || v; });
+    if (t.value.replace(/\D/g, "").length < 8) { t.setAttribute("aria-invalid", true); bad = true; }
+    if (!tipo) bad = true;
+    err.hidden = !bad;
+    if (bad) return;
+    collect(p1);
+    dl.push({ event: "lead_paso1", tipo_proyecto: lead.tipo });
+    send(1);
+    show(p2);
+  });
+
+  p2.addEventListener("submit", function (e) {
+    e.preventDefault();
+    collect(p2);
+    dl.push({ event: "lead_enviado", tipo_proyecto: lead.tipo, etapa: lead.etapa || "", inversion: lead.inversion || "" });
+    var link = waLink(leadText());
+    var btn = ok.querySelector(".js-wa-lead");
+    btn.href = link; btn.target = "_blank"; btn.rel = "noopener";
+    document.getElementById("nombre-ok").textContent = (lead.nombre || "").split(" ")[0] || "por escribirnos";
+    if (!CONFIG.endpoint) { window.open(link, "_blank", "noopener"); }
+    send(2);
+    show(ok);
+  });
+
+  document.getElementById("volver").addEventListener("click", function () { show(p1); });
+  document.getElementById("otra").addEventListener("click", function () {
+    p1.reset(); p2.reset(); lead = {}; err.hidden = true; show(p1);
+  });
+})();
+</script>
+</body>
+</html>
